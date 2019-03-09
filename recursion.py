@@ -16,7 +16,7 @@ class Node(object):
 
         self.next = node
 
-    def traverse_recursively(self, nodes_data = set()):
+    def traverse_recursively(self):
         """Traverse a Node's path recursively and print out each node's data.
 
         >>> apple = Node("apple")
@@ -29,19 +29,13 @@ class Node(object):
         berry
         cherry
         """
-        current = node
+        current = self
 
-        nodes_data.add(current)
-
-
-        if current.next == None :
-            print(node for node in nodes_data)
-
-        # TODO: Complete this method
-        
-        else:
-            self.traverse_recursively(current.next, nodes_data)
-        
+        if current:
+            print(current.data)
+        if current.next: #---if current.next != None:
+            current = current.next
+            current.traverse_recursively()
 
 
 #####################################################################
