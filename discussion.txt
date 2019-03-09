@@ -1,0 +1,111 @@
+Discussion
+----------
+
+1. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - frequently removing and adding items to the beginning of the data structure
+
+  - frequently removing and adding items to the end of the data structure
+
+  - rarely indexing and searching
+
+  A. A Python list B. Singly linked list C. Doubly linked list
+
+  Explain your answer.
+
+A doubly linked list>
+the runtime for both adding and removing from both the begginig and end is big O(1)
+It has a previous attribute that helps identify the previous node from the tail node thus making removing nodes from the end  big O(1)
+
+
+
+
+
+
+
+2. Which would be the most efficient data structure for a data set with the
+   following requirements:
+
+  - order is unimportant
+
+  -frequently adding and removing items
+
+  - frequently looking up items
+
+  A. A Python list  B. A Dictionary  C. Deque  D. Binary Search Tree
+
+  Explain your answer.
+  Dictionary
+  You can and and remove items by key and its big O(1), also looking up items by key is  big O(1)
+
+
+
+
+
+3. Explain why looking up, adding elements, and removing elements from a 
+   dictionary or hash map are all O(1) operations.
+
+   because python uses the harsh to get to the index where the element is with out traversing the items in the container(dictionary)
+
+
+
+
+
+
+4. Explain why removing elements from or adding elements to an arbitrary
+   location in a Python list are O(n) operations.
+
+python lists are ordered,to insert to an arbitrary place, you have to move all the elements after your insertion in order to create room for the new element you are inserting. and also when you remove an element from a random place you have to move all items after the removal to cover up the space of the element that has been removed
+
+
+
+
+
+
+5. What is the correct runtime for:
+
+  - Bubble Sort? big O(n^2)
+
+  - Quicksort? big O(n log n)
+
+  - Merge Sort? big O(n log n)
+
+  - Insertion Sort? big O(n log n)
+
+
+6. What is the difference between a tree and a graph?
+graphs can contain circles, graphs can be dirrected or undirected
+a graph can be connected or unconnected but trees are only directed, connected and acyclic.
+
+Trees have a head and a tail, they have heirarchy but graphs to not have a hierarchy
+
+
+
+
+
+7. Using the Python implementation of Quicksort from the instructions:
+
+  Given the list [8, 4, 1, 6, 5, 2, 7, 3]:
+  When this function is initially called, what are the values of:
+
+    - lst - [8, 4, 1, 6, 5, 2, 7, 3]
+
+    - pivot -[5]
+
+    - lo - [4,1,2,3]
+
+    - hi -[8,6,7]
+
+
+
+  When the quicksort is first called recursively on the `lo` list, what are the
+  values of:
+
+  - lst - [4,1,2,3]
+
+  - pivot - [2]
+
+  - lo - [1 ]
+
+  - hi - [4,3]
